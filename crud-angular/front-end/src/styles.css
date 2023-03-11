@@ -20,3 +20,25 @@ body {
 .v-middle {
   vertical-align: middle;
 }
+
+.icon-edit {
+  color: #3f51b5;
+  margin: 5px;
+}
+
+.icon-delete {
+  color: #e3536b;
+  margin: 5px;
+}
+
+.msg-success {
+  --mat-mdc-snack-bar-button-color: #fff;
+  --mdc-snackbar-container-color: #1ca318;
+  --mdc-snackbar-supporting-text-color: #fff;
+}
+
+.msg-error {
+  --mat-mdc-snack-bar-button-color: #fff;
+  --mdc-snackbar-container-color: #e3536b;
+  --mdc-snackbar-supporting-text-color: #fff;
+}

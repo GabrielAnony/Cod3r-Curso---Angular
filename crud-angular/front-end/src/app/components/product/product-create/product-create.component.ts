@@ -13,7 +13,6 @@ export class ProductCreateComponent implements OnInit {
 
   product: Product = {
     item: "",
-    valor: 0,
   };
 
   ngOnInit(): void {}

@@ -1,0 +1,16 @@
+.buttonDel {
+  color: #fff;
+  background-color: #e3536b;
+}
+
+.buttonCan {
+  border-color: rgb(209, 209, 209);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.mat-mdc-dialog-actions {
+  display: flex;
+  justify-content: right;
+  margin: 0px 10px 10px 0px;
+}

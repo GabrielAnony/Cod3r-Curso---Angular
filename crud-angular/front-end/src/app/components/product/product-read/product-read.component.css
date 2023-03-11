@@ -1,0 +1,70 @@
+.tableList {
+  max-width: 80% !important;
+}
+
+.title {
+  margin: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(85, 85, 85);
+}
+
+.title > i {
+  margin-right: 10px;
+}
+
+mat-card {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(201, 201, 201, 1) 100%
+  );
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+mat-card-title {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+
+mat-card > button {
+  margin-right: 10px;
+}
+
+.tableList {
+  margin-top: 20px;
+}
+
+.mat-column-id {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.mat-column-item {
+  padding-left: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mat-column-valor {
+  width: 200px;
+  font-style: italic;
+  border-right: 1px solid currentColor;
+  border-left: 1px solid currentColor;
+}
+
+.mat-column-action {
+  width: 100px;
+  font-weight: 500;
+}
+
+a > i {
+  cursor: pointer;
+}

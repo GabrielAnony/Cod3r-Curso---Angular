@@ -1,21 +1,30 @@
 .header {
   display: flex;
   align-items: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(201, 201, 201, 1) 100%
+  );
 }
 
 .header a {
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: #333;
 }
 
 .header .logo {
   max-height: 55px;
+  padding-left: 30px;
 }
 
 .header .title-group {
-  padding-left: 25px;
-  font-weight: 300;
+  padding-left: 90px;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 
 .header .title-group i {

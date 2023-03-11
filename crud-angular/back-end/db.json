@@ -1,11 +1,6 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "item": "Caneta BIC Preta",
-      "valor": "5.89"
-    },
-    {
       "id": 2,
       "item": "Notebook Mac Pro",
       "valor": "12000.00"
@@ -22,8 +17,18 @@
     },
     {
       "item": "Bicicleta BMX",
-      "valor": "300.50",
+      "valor": "300",
       "id": 5
+    },
+    {
+      "item": "Plastation 5",
+      "valor": "4000.90",
+      "id": 6
+    },
+    {
+      "item": "Novo",
+      "valor": "555",
+      "id": 7
     }
   ]
 }

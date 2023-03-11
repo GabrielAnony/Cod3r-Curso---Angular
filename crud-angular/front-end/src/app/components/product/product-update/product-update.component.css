@@ -16,11 +16,5 @@
   font-weight: bold;
   color: rgb(85, 85, 85);
   font-size: 1.9rem;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.title > i {
-  margin-right: 5px;
+  margin: 20px 0px 10px 10px;
 }

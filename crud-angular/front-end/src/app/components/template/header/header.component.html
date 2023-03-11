@@ -1,16 +1,15 @@
 <mat-toolbar class="header mat-elevation-z4">
   <span>
-    <a routerLink="/">
+    <a routerLink="{{routerUrl}}">
       <img class="logo" src="assets/img/logoCaxias.png" alt="logo">
     </a>
   </span>
-
   <span class="title-group">
-    <a>
+    <a routerLink="">
       <i class="material-icons">
-        menu
+        {{icon}}
       </i>
-      Cancelamento de Débitos
+      {{title}}
     </a>
 
   </span>
