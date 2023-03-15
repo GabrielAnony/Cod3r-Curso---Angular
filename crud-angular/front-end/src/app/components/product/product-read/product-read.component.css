@@ -9,12 +9,22 @@
   color: rgb(85, 85, 85);
 }
 
+.titleBar {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(85, 85, 85);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(201, 201, 201, 1) 100%
+  );
+}
+
 .title > i {
   margin-right: 10px;
 }
 
-mat-card {
-  background: rgb(255, 255, 255);
+.barList {
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 0%,
@@ -67,4 +77,18 @@ mat-card > button {
 
 a > i {
   cursor: pointer;
+}
+
+.formPnl {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 0px 20px;
+}
+
+.button {
+  text-align: right;
+}
+
+.button button {
+  margin: 10px 20px 20px 0px;
 }

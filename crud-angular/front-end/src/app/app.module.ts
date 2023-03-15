@@ -29,7 +29,8 @@ import localePt from "@angular/common/locales/pt";
 import { registerLocaleData } from "@angular/common";
 import { ProductUpdateComponent } from "./components/product/product-update/product-update.component";
 import { MatDialogModule } from "@angular/material/dialog";
-import { ProductDeleteModalComponent } from './components/product/product-delete-modal/product-delete-modal.component';
+import { ProductDeleteModalComponent } from "./components/product/product-delete-modal/product-delete-modal.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 registerLocaleData(localePt);
 
@@ -64,6 +65,7 @@ registerLocaleData(localePt);
     MatTableModule,
     MatSortModule,
     MatDialogModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {

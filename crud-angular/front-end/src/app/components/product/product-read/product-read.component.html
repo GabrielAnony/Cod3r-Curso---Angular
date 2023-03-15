@@ -1,3 +1,30 @@
+<div class="mat-elevation-z4 tableList">
+  <mat-card>
+    <mat-card-title class="titleBar">
+      <i class=" material-icons"> add_box </i> Consultar Produtos
+    </mat-card-title>
+
+    <form class=" formPnl" [formGroup]="form">
+      <mat-form-field>
+        <input matInput placeholder="ID" formControlName="id">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Nome Produto" formControlName="item">
+      </mat-form-field>
+    </form>
+
+    <div class="button">
+      <button mat-raised-button class="mat-button-wrapper" (click)="readConsult()" color="primary">
+        Consultar
+      </button>
+      <button mat-raised-button class="mat-button-wrapper" (click)="limparCampos()">
+        Limpar
+      </button>
+
+    </div>
+  </mat-card>
+</div>
+
 <div class="mat-elevation-z5 tableList">
   <mat-card class="barList">
     <mat-card-title class="title"> <i class="material-icons">reorder</i> Lista de Produtos </mat-card-title>
@@ -6,7 +33,7 @@
     </button>
   </mat-card>
 
-  <table mat-table [dataSource]="products">
+  <table mat-table [dataSource]="products" id="tableProducts">
 
     <!-- Position Column -->
     <ng-container matColumnDef="id">

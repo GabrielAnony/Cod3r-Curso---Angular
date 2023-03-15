@@ -1,9 +1,10 @@
 import { Product } from "./../product.model";
-import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ProductService } from "../product.service";
 import { Router } from "@angular/router";
 import { MatDialog } from "@angular/material/dialog";
 import { ProductDeleteModalComponent } from "../product-delete-modal/product-delete-modal.component";
+import { FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
   selector: "app-product-read",
@@ -11,20 +12,24 @@ import { ProductDeleteModalComponent } from "../product-delete-modal/product-del
   styleUrls: ["./product-read.component.css"],
 })
 export class ProductReadComponent implements OnInit {
+  form: FormGroup;
+
   products: Product[] = [];
   displayedColumns: string[] = ["id", "item", "valor", "action"];
 
   constructor(
     private productService: ProductService,
     private router: Router,
-    public dialog: MatDialog
-  ) {}
-
-  ngOnInit(): void {
-    this.productService.read().subscribe((products) => {
-      this.products = products;
+    public dialog: MatDialog,
+    private formBuilder: FormBuilder
+  ) {
+    this.form = this.formBuilder.group({
+      id: [""],
+      item: [""],
     });
   }
+
+  ngOnInit(): void {}
 
   navigateToProductCreate(): void {
     this.router.navigate(["products/create"]);
@@ -33,7 +38,6 @@ export class ProductReadComponent implements OnInit {
   openDialog(product: Product): void {
     const dialogRef = this.dialog.open(ProductDeleteModalComponent, {
       width: "550px",
-      //data: { message: "Tem certeza que deseja excluir o item? " },
       data: product,
     });
 
@@ -41,9 +45,19 @@ export class ProductReadComponent implements OnInit {
       if (result) {
         this.productService.delete(product).subscribe(() => {
           this.productService.showMsg("Produto Excluido com Sucesso!");
-          this.ngOnInit();
+          this.readConsult();
         });
       }
     });
+  }
+
+  readConsult() {
+    this.productService.buscarProduto(this.form.value).subscribe((products) => {
+      this.products = products;
+    });
+  }
+
+  limparCampos() {
+    this.form.reset();
   }
 }
