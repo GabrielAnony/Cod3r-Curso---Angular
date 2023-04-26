@@ -1,5 +1,7 @@
 # Cod3r-Curso-Angular
 
+#Minhas anotações
+
 Curso angular 9 essencial da cod3r
 
 #Conceito de Observable
